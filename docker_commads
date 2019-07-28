@@ -1,6 +1,5 @@
-# Docker useful commands.
-# How to get docker images
 
+# How to get docker images
 docker images
 
 -----------------------------------------------------------------------------------------------------
