@@ -8,3 +8,5 @@ docker images
 docker run -it ubuntu
 
 -----------------------------------------------------------------------------------------------------
+# Port mapping with Docker 
+docker run -it -p 80:80  ubuntu
