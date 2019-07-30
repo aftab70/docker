@@ -13,4 +13,8 @@ docker run -it -p 80:80  ubuntu
 # How to access container using docker 
  docker exec -it container_id /bin/bash
  
- ----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+# How to run the commadns from outsite the docker
+docker exec -it <container_id_or_name> echo "I'm inside the container!"
+
+----------------------------------------------------------------------------------------------------
