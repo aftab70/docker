@@ -20,3 +20,4 @@ docker exec -it <container_id_or_name> echo "I'm inside the container!"
 ----------------------------------------------------------------------------------------------------
 # How to mount directory, How to mapped port number and how to save container with nick-name 
 docker run -v /opt/:/opt/ -p 81:81  --name Apache3 -it ubuntu
+example - docker run -v /Docker/apache2/var/www/html:/var/www/html -p 80:80 -p 443:443  --name Apache2 -it ubuntu
