@@ -1,0 +1,11 @@
+# Bridge (Internal private network for docker containers) 
+
+docker run ubuntu
+
+# none   ( Stand alone container )
+
+docker run ubuntu --network=none
+
+# host ( Docker container fully mapped with host ports)
+
+docker run ubuntu --network=host
