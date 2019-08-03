@@ -9,3 +9,8 @@ docker run ubuntu --network=none
 # host ( Docker container fully mapped with host ports)
 
 docker run ubuntu --network=host
+
+##################################################################################################################################
+
+Overlay network in dokcer 
+
