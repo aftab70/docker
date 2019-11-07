@@ -1,0 +1,35 @@
+######################################################## Docker Swarn ##########################################################
+#Configure the Manager Node for Swarm Cluster Initialization
+
+docker swarm init --advertise-addr 192.168.1.103
+
+# Configure Worker Nodes to join the Swarm Cluster
+
+docker swarm join --token SWMTKN-1-4htf3vnzmbhc88vxjyguipo91ihmutrxi2p1si2de4whaqylr6-3oed1hnttwkalur1ey7zkdp9l 192.168.1.103:2377
+
+# Verify the Swarm Cluster
+
+docker node ls
+
+# If at any time, you lost your join token, it can be retrieved by running the following command on the manager node for the manager token:
+
+docker swarm join-token manager -q
+
+# The same way to retrieve the worker token run the following command on the manager node:
+
+docker swarm join-token worker -q
+
+# Deploy new Service on Swarm Cluster
+
+docker service create --name my-web1 --publish 8081:80 --replicas 2 nginx
+
+# To check the newly created nginx service using below docker service commands.
+
+docker service ls
+
+docker service ps my-web1
+
+# If we need to check whether nginx service is working fine, either we can use the curl command or check in the browser on host machine for the nginx web server welcome page.
+
+curl http://dockermanager:8081
+
