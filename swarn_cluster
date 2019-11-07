@@ -43,3 +43,16 @@ docker service scale my-web1=4
 
 docker service scale my-web1=2
 
+Example ---------------------------------------------------------------------------------------------------------------------
+
+docker service create --name swarn-aftab --publish 9696:80 --replicas 4 nginx
+docker node ls
+docker service ls
+docker service scale swarn-aftab=3
+docker service ls
+docker service ps swarn-aftab 
+docker service scale swarn-aftab=4
+docker service ls
+docker service ps swarn-aftab 
+docker service rm swarn-aftab 
+docker service ls
