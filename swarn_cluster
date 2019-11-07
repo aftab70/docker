@@ -33,3 +33,13 @@ docker service ps my-web1
 
 curl http://dockermanager:8081
 
+# How to scal up and scal down on fly using docker swarn.
+
+for scal up
+
+docker service scale my-web1=4
+
+#for scal down
+
+docker service scale my-web1=2
+
