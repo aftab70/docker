@@ -1,2 +1,21 @@
 ################################################# Build dopcker images ########################################################
 
+mkdir /tmp/DockerFile
+cd /tmp/DockerFile/
+echo "echo "I am comming form DockerFile" > index.html
+vim Dockerfile
+
+---------------------------------------------------- DockerFile Code -----------------------------------------------------------
+FROM ubuntu:latest
+MAINTAINER Aftab Ali - Linux Admin
+RUN apt update && apt install apache2 -y
+COPY index.html /var/www/html/
+CMD ["apache2ctl", "-D", "FOREGROUND"] 
+EXPOSE 80
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+docker build /tmp/DockerFile/ -t image_name
+
+--------------------------------------------------------------------------------------------------------------------------------
+
