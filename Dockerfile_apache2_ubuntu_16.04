@@ -1,0 +1,2 @@
+CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 80 CMD ["apache2ctl", "-D", "FOREGROUND"]
