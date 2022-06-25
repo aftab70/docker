@@ -9,10 +9,6 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: ls
-  displayName: 'Run a one-line script'
-  
 
 - task: Docker@2
   inputs:
