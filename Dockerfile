@@ -1,7 +1,7 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER Aftab Ali - Linux Admin
 RUN apt-get update -y
 RUN apt-get install apache2 -y
-Run echo "Hello Aftab, Docker image is Deployed" > /var/www/html/index.html
+RUN echo "Hello Aftab" > /var/www/html/index.html
 CMD ["apache2ctl", "-D", "FOREGROUND"] 
 EXPOSE 80
