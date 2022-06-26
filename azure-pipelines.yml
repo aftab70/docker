@@ -19,4 +19,4 @@ steps:
     containerRegistry: 'DockerHUB'
     repository: 'aftab70/apache2'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/apache2/Dockerfile'
